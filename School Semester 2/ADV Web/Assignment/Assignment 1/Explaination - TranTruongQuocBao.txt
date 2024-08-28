@@ -1,0 +1,4 @@
+I choose to make an Restaurant Menu Application and it is statis(No API)
+
+My Purpose:
+The purpose of my React application is to give users useful information about the available dishes in a restaurant, including food names, descriptions, prices, and ingredients. I choose this application to make it represent as a digital menu, which can be used by customers to browse through the offerings before placing an order. The application will include different components to display various sections of the menu, such as appetizers, main courses, desserts, and beverages. Lastly, I also add responsive feature which scalable for many different devices and some hover animation to make it more user-friendly.

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+  
+    <!-- CSS  -->
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+  
+        h1 {
+            text-align: center;
+            color: #006600;
+            font-size: xx-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        }
+  
+        td {
+            background-color: #E4F5D4;
+            border: 1px solid black;
+        }
+  
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+    </style>
+</head>
+  
+<body>
+    <section>
+        <h1>Employees</h1>
+  
+        <!--TABLE-->
+        <table id='table'>
+            <!-- TABLE HEADING(TH)-->
+            <tr>
+                <th>Employee1</th>
+                <th>Employee2</th>
+                <th>Employee3</th>
+                <th>Employee4</th>
+            </tr>
+        </table>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // FETCHING DATA FROM JSON LINK
+            fetch('https://dummy.restapiexample.com/api/v1/employees')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    var employees = '';
+  
+                    // ITERATING THROUGH OBJECTS
+                    data.data.forEach(employee => {
+                        // CONSTRUCTION OF ROWS
+                        employees += '<tr>';
+                        employees += '<td>' + employee.employee_name + '</td>';
+                        employees += '<td>' + employee.employee_age + '</td>';
+                        employees += '<td>' + employee.employee_salary + '</td>';
+                        employees += '<td>' + employee.employee_salary + '</td>';
+                        employees += '</tr>';
+                    });
+                          
+                    // INSERTING ROWS INTO TABLE 
+                    document.getElementById('table').innerHTML = employees;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        });
+    </script>
+</body>
+</html>

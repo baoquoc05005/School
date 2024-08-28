@@ -1,0 +1,35 @@
+.dish {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: calc(100% - 40px);
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish h2 {
+    color: #333;
+}
+
+.dish p {
+    color: #666;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 769px) {
+    .dish {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .dish {
+        width: calc(25% - 40px);
+    }
+}
+
+.dish:hover {
+    transform: translateY(-10px);
+}

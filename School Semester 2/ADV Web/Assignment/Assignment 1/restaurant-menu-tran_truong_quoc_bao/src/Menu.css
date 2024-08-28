@@ -1,0 +1,38 @@
+.menu {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.dish-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .dish-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dish-list {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1025px) {
+    .dish-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

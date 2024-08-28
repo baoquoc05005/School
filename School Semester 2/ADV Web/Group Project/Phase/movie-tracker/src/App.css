@@ -1,0 +1,110 @@
+
+
+.App {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  flex: 1;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+
+h1, p {
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+}
+
+.filter-sort {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 16px;
+  background-color: #fff;
+}
+
+.sort-section, .filter-section {
+  margin-bottom: 20px;
+}
+
+.date-filter, .genre-filter {
+  margin-top: 10px;
+}
+
+.date-filter label, .genre-filter label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.react-datepicker-wrapper {
+  display: inline-block;
+  width: 100%;
+}
+
+.react-datepicker__input-container input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.basic-multi-select {
+  width: 100%;
+}
+
+.basic-multi-select .select__control {
+  border-radius: 4px;
+}
+
+.basic-multi-select .select__control--is-focused {
+  border-color: #aaa;
+}
+
+.basic-multi-select .select__option--is-focused {
+  background-color: #f1f1f1;
+}
+
+.basic-multi-select .select__multi-value__label {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.basic-multi-select .select__multi-value__remove {
+  background-color: #27ae60;
+  color: white;
+}
+
+

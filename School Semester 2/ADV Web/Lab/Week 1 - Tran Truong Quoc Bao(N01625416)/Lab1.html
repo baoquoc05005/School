@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moment.js and Lodash Example</title>
+<!-- 1. I add Moment.js and Lodash.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+</head>
+
+<body>
+<script>
+  // 2. Create a date variable and manipulate it with Moment.js
+  //current date varaible
+  var currentDate = moment();
+  console.log("Current Date:", currentDate.format("MMMM Do YYYY, h:mm:ss a")); // format for current date
+
+  //future date variable
+  var futureDate = moment(currentDate).add(7, 'days');                                      //I manipulate date to calculate future date
+  console.log("Future Date (7 days later):", futureDate.format("MMMM Do YYYY, h:mm:ss a")); // display date 7 days from now
+
+  //past date variable
+  var pastDate = moment(currentDate).subtract(3, 'days');                                   //I manipulate date to calculate past date
+  console.log("Past Date (3 days earlier):", pastDate.format("MMMM Do YYYY, h:mm:ss a"));   //display past date 
+
+  // 3: Create array in JavaScript and manipulate it using Lodash
+  //I create numbersArray as array which has 5 element
+  var numbersArray = [1, 2, 3, 4, 5];
+  console.log("Array:", numbersArray);
+
+  // I use Lodash to retrieve information from array
+  console.log("First element of the array:", _.first(numbersArray)); // I retrieve 1st element and the last element of the array
+  console.log("Last element of the array:", _.last(numbersArray));  
+  console.log("Shuffled array:", _.shuffle(numbersArray));           // I shuffle the array
+</script>
+
+</body>
+</html>

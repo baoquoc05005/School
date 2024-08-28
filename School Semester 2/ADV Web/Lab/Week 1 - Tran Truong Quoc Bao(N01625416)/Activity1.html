@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Date</title>
+  <!-- I add Moment.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+  <h1>Current Date</h1>
+  <p id="currentDate"></p>
+
+  <script>
+    // Get the current date from Moment.js
+    var currentDate = moment().format('YYYY MM DD');
+    
+    // Lastly, Display the date
+    document.getElementById('currentDate').innerText = currentDate;
+  </script>
+</body>
+</html>
