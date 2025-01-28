@@ -1,6 +1,6 @@
 const _ = require('lodash');
 
-// Create list of holiday objects
+//  list of holiday objects
 const holidays = [
     { name: 'Christmas', date: '2025-12-25' },
     { name: 'Canada Day', date: '2025-07-01' },
@@ -10,7 +10,7 @@ const holidays = [
     { name: 'Victoria Day', date: '2025-05-19' }
 ];
 
-// Function to calculate days until holiday
+// calculate days until holiday
 function getDaysUntil(dateStr) {
     const holiday = new Date(dateStr);
     const today = new Date();
@@ -19,18 +19,18 @@ function getDaysUntil(dateStr) {
     return diffDays;
 }
 
-// Iterate and print days until each holiday
+// iterate and print days until each holiday
 console.log('Days until each holiday:');
 holidays.forEach(holiday => {
     const daysUntil = getDaysUntil(holiday.date);
     console.log(`${holiday.name}: ${daysUntil} days`);
 });
 
-// Get random holiday using lodash
+// random holiday using lodash
 const randomHoliday = _.sample(holidays);
 console.log('\nRandom holiday:', randomHoliday.name, 'on', randomHoliday.date);
 
-// Find indexes of specific holidays using lodash
+// indexes of specific holidays using lodash
 const christmasIndex = _.findIndex(holidays, { name: 'Christmas' });
 const canadaDayIndex = _.findIndex(holidays, { name: 'Canada Day' });
 
