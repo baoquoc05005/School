@@ -1,0 +1,6 @@
+npm init -y
+npm i express nodemon dotenv
+create new file .env write PORT9000 in in it
+create new file index.js
+nodemon index.js in terminal
+modife package.json > "type": "module"
