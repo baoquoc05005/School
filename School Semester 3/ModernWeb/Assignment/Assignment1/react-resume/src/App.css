@@ -1,0 +1,155 @@
+/* General Page Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container and Layout */
+.container-fluid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Centering All Text */
+.container-fluid, 
+.row, 
+.col, 
+.card, 
+.card-body {
+  text-align: left;
+}
+
+/* Special Header Center Alignment */
+.row.text-center,
+.row.text-center .col {
+  text-align: center;
+}
+
+/* Header Section */
+.resume-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a73e8;
+}
+
+.resume-subtitle {
+  font-size: 1.6rem;
+  color: #5f6368;
+}
+
+.resume-description {
+  font-size: 1.1rem;
+  color: #5f6368;
+  margin-top: 15px;
+}
+
+/* Card Styling */
+.resume-card {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(60, 64, 67, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.resume-card:hover {
+  box-shadow: 0 10px 20px rgba(60, 64, 67, 0.25);
+  transform: translateY(-5px);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #202124;
+  border-bottom: 3px solid #1a73e8;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Text details within card */
+.degree, 
+.school-location, 
+.grad-date,
+.experience-position,
+.experience-details,
+.course-title,
+.project-title {
+  color: #3c4043;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* List Items */
+.course-item, 
+.project-item, 
+.task-item, 
+.skill-item, 
+.tech-item {
+  background-color: #e8f0fe;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.course-item:hover, 
+.project-item:hover, 
+.task-item:hover, 
+.skill-item:hover, 
+.tech-item:hover {
+  background-color: #d2e3fc;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1669c1;
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .resume-title {
+    font-size: 2rem;
+  }
+
+  .resume-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .resume-description {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .container-fluid {
+    padding: 0 15px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .resume-card {
+    padding: 15px;
+  }
+
+  .btn-primary {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}
